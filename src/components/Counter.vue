@@ -13,12 +13,13 @@
 
       <Image v-if="surprise" src="~/images/NativeScript-Vue.png" />
 
-      <ListView for="(item, index) in someList" @tap="onItemTap">
+      <!-- <ListView for="(item, index) in someList" @tap="onItemTap"> -->
 
-        <v-template>
-          <Label :text="index.toString()" />
-        </v-template>
-      </ListView>
+      <!-- <v-template if="true">
+        <Label text="所发生的" />
+        <Label text="所发生的" />
+      </v-template> -->
+      <!-- </ListView> -->
     </StackLayout>
 
   </Page>
@@ -30,7 +31,7 @@ import { mapActions } from 'vuex';
 export default {
   data() {
     return {
-      someList: new Array(200)
+      someList: new Array(99)
     }
   },
   computed: {
@@ -46,7 +47,7 @@ export default {
       'decrement',
       'increment',
     ]),
-    onItemTap(event) {
+    log(event) {
       console.log(event.index)
     }
   },
