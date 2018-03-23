@@ -3,9 +3,10 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import Home from '../components/Home';
-import HelloWorld from '../components/HelloWorld';
-import Counter from '../components/Counter';
+import Home from '../views/Home';
+import HelloWorld from '../views/HelloWorld';
+import Counter from '../views/Counter';
+import Dialogs from '../views/Dialogs';
 
 const router = new VueRouter({
   pageRouting: true,
@@ -31,7 +32,14 @@ const router = new VueRouter({
         title: 'Counter',
       },
     },
-    {path: '*', redirect: '/home'},
+    {
+      path: '/dialogs',
+      component: Dialogs,
+      meta: {
+        title: 'Dialogs',
+      },
+    },
+    { path: '*', redirect: '/home' },
   ],
 });
 

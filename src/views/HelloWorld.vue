@@ -32,7 +32,4 @@
     margin: 20;
   }
 
-  Label {
-    color: red;
-  }
 </style>

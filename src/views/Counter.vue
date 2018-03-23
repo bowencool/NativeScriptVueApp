@@ -1,7 +1,8 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Counter">
-      <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" @tap="$router.push('/home')" />
+    <ActionBar title="My App" visibility="hidden">
+      <ActionItem @tap="onTapShare" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar" />
+      <ActionItem @tap="onTapDelete" ios.systemIcon="16" ios.position="right" text="delete" android.position="popup" />
     </ActionBar>
 
     <StackLayout>
@@ -11,7 +12,10 @@
         <Button @tap="increment" text="+" class="btn btn-outline" />
       </FlexboxLayout>
 
+
       <Image v-if="surprise" src="~/images/NativeScript-Vue.png" />
+
+      <ActivityIndicator :busy="!surprise" />
 
       <!-- <ListView for="(item, index) in someList" @tap="onItemTap"> -->
 

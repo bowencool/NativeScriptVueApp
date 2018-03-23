@@ -10,7 +10,7 @@ import store from './store';
 const dialogs = require('tns-core-modules/ui/dialogs')
 
 Object.defineProperties(Vue.prototype, {
-  '$dialog': {
+  '$dialogs': {
     value: dialogs,
     writable: false,
   }
