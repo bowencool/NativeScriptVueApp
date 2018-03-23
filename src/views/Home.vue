@@ -33,11 +33,11 @@ export default {
     return {
       links: [
         {
-          path: '/hello?user=John+Appleseed',
-          text: 'hello'
+          path: '/routing/123?b=456',
+          text: 'routing'
         },
         {
-          path: '/counter',
+          path: '/vuex',
           text: 'vuex'
         },
         {

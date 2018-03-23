@@ -4,8 +4,8 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Home from '../views/Home';
-import HelloWorld from '../views/HelloWorld';
-import Counter from '../views/Counter';
+import Routing from '../views/Routing';
+import Vuex from '../views/Vuex';
 import Dialogs from '../views/Dialogs';
 
 const router = new VueRouter({
@@ -19,17 +19,17 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/hello',
-      component: HelloWorld,
+      path: '/routing/:a',
+      component: Routing,
       meta: {
-        title: 'Hello World',
+        title: 'routing',
       },
     },
     {
-      path: '/counter',
-      component: Counter,
+      path: '/vuex',
+      component: Vuex,
       meta: {
-        title: 'Counter',
+        title: 'Vuex',
       },
     },
     {
