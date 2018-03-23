@@ -9,8 +9,11 @@
       <Label :text="JSON.stringify($route.params)" />
       <Label :text="JSON.stringify($route.query)" />
 
-      <!-- todo 嵌套路由 -->
+      <Label text="<router-view /> doesn't work." class="text-danger"></Label>
       <router-view />
+
+      <Label text="<child-component /> doesn't work." class="text-danger"></Label>
+      <!-- <ChildComponent /> -->
 
     </StackLayout>
 
@@ -18,5 +21,10 @@
 </template>
 
 <script>
-export default {};
+import ChildComponent from "../../components/ChildComp"
+export default {
+  components: {
+    ChildComponent
+  }
+};
 </script>
