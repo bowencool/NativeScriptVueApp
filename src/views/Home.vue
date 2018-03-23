@@ -7,23 +7,21 @@ Label.link {
 
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Home" />
+
+    <ActionBar class="action-bar" title="Home">
+      <ActionItem ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar" />
+      <ActionItem ios.systemIcon="16" ios.position="right" text="action1" android.position="popup" />
+      <ActionItem ios.systemIcon="16" ios.position="right" text="action2" android.position="popup" />
+    </ActionBar>
 
     <StackLayout>
-
-      <!-- <ScrollView>
-      <StackLayout>
-        <Label v-for="link in links" class="text-capitalize text-center link" @tap="$router.push(link.path)">{{link.text}}</Label>
-      </StackLayout>
-    </ScrollView> -->
-
       <ListView for="link in links" @itemTap="navTo">
         <v-template>
           <Label :text="link.text" class="text-capitalize text-center link" />
         </v-template>
       </ListView>
-
     </StackLayout>
+
   </Page>
 </template>
 
