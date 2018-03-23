@@ -1,8 +1,7 @@
 <template>
   <Page class="page">
-    <ActionBar title="My App" visibility="hidden">
-      <ActionItem @tap="onTapShare" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar" />
-      <ActionItem @tap="onTapDelete" ios.systemIcon="16" ios.position="right" text="delete" android.position="popup" />
+    <ActionBar class="action-bar" :title="$route.fullPath">
+      <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" @tap="$router.push('/home')" />
     </ActionBar>
 
     <StackLayout>

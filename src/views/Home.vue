@@ -11,7 +11,7 @@ Label.link {
 
     <StackLayout>
 
-    <!-- <ScrollView>
+      <!-- <ScrollView>
       <StackLayout>
         <Label v-for="link in links" class="text-capitalize text-center link" @tap="$router.push(link.path)">{{link.text}}</Label>
       </StackLayout>
@@ -33,7 +33,7 @@ export default {
     return {
       links: [
         {
-          path: '/routing/123?b=456',
+          path: '/routing/123/childroute?b=456',
           text: 'routing'
         },
         {
@@ -43,6 +43,10 @@ export default {
         {
           path: '/dialogs',
           text: 'dialogs'
+        },
+        {
+          path: '/layouts',
+          text: 'layouts'
         },
       ]
     }

@@ -1,5 +1,8 @@
 <template>
     <Page>
+        <ActionBar class="action-bar" :title="$route.fullPath">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" @tap="$router.push('/home')" />
+        </ActionBar>
         <StackLayout class="btns">
             <Button class="btn" @tap="actionDialog">action Dialog</Button>
             <Button class="btn" @tap="alert">alert</Button>

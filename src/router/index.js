@@ -4,9 +4,11 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Home from '../views/Home';
-import Routing from '../views/Routing';
+import Routing from '../views/Routing/index';
+import ChildRoute from '../views/Routing/ChildRoute';
 import Vuex from '../views/Vuex';
 import Dialogs from '../views/Dialogs';
+import Layouts from '../views/Layouts';
 
 const router = new VueRouter({
   pageRouting: true,
@@ -21,9 +23,12 @@ const router = new VueRouter({
     {
       path: '/routing/:a',
       component: Routing,
-      meta: {
-        title: 'routing',
-      },
+      children: [
+        {
+          path: 'childroute',
+          component: ChildRoute,
+        }
+      ]
     },
     {
       path: '/vuex',
@@ -38,6 +43,11 @@ const router = new VueRouter({
       meta: {
         title: 'Dialogs',
       },
+    },
+    {
+      path: '/layouts',
+      component: Layouts,
+      meta: {},
     },
     { path: '*', redirect: '/home' },
   ],
